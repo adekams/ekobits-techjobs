@@ -1,0 +1,85 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    border: 4px solid #000;
+    height: 97vh;
+    width: 95vw;
+    margin: auto;
+    
+}
+
+.wrapper .flex.box {
+    padding: 10px 0; 
+    height: 95%;  
+}
+
+h3 {
+    border-bottom: 4px solid #000;
+}
+
+.content {  
+    width: 95%;
+    margin: 10px auto;
+    height: 20%;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.content.flex {
+    height: 77%;
+}
+
+.content.flex div {
+    flex: 0 0 32% ;
+    height: 45%;
+}
+
+.content div {
+    border: 3px solid black;
+}
+
+#one,
+#two,
+#three {
+    background: url('netflix.jpg') no-repeat;
+    background-size: cover ;
+    border: none;
+}
+
+#one img {
+    width: 100%;
+    display: none;
+    object-fit: cover;    
+}
+
+
+.four {
+    background: rgb(226, 226, 10);
+}
+.five {
+    background: red;
+}
+.six {
+    background: darkturquoise;
+}
+
+.top {
+    background: rgb(26, 173, 26);
+    height: 100%;
+    width: 100%;
+}
