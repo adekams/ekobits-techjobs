@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+.grid {
+
+}
+
+.wrapper div {
+    height: 300px;
+}
+
+.col-4 {
+    width: 100%;
+    background: red;
+
+}
+
+.col-6 {
+    width: 100%;
+    background: blue;
+}
+
+.col-12 {
+    width: 100%;
+    background: green;
+}
+
+@media Screen and (min-width: 765px) {
+    .col-4 {
+        width: 50%;
+    }
+}
+
+@media Screen and (min-width: 960px) {
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+}
