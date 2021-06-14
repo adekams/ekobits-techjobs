@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#clock-face {
+    width: 250px;
+    height: 250px;
+    border: 3px solid #141414;
+    border-radius: 50%;
+    position: relative;
+}
+
+#hour {
+    width: 3px;
+    height: 45px;
+    border: 1px solid #000;
+    position: absolute;
+    top: 75px;
+    left: 120px;
+}
+
+#min {
+    width: 2px;
+    height: 65px;
+    border: 1px solid green;
+    position: absolute;
+    top: 60px;
+    left: 120px;
+}
+
+#second {
+    width: 1px;
+    height: 85px;
+    border: 1px solid red;
+    position: absolute;
+    top: 40px;
+    left: 120px;
+}
+
+#dot {
+    width: 8px;
+    height: 8px;
+    border: 1px solid #141414;
+    border-radius: 100px;
+    background: blue;
+    position: absolute;
+    top: 120px;
+    left: 117px;
+}
