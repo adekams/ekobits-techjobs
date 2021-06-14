@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: linear-gradient(
+      to right,
+      rgba(58, 58, 158, 0.8),
+      rgba(135, 135, 202, 0.7)
+    ),
+    url("https://res.cloudinary.com/adenike/image/upload/v1586709952/survey-form-background_jbnvuo.jpg")
+      fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+.header {
+  color: white;
+  text-align: center;
+  margin-top: 60px;
+}
+.header h1 {
+  font-family: inherit;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 400;
+}
+.header h2 {
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 15px;
+  font-weight: 200;
+}
+.survey-form form {
+  display: block;
+  padding: 20px;
+  border-radius: 3px;
+  border: none;
+  margin: 50px auto;
+  width: 91%;
+  margin-bottom: 0;
+  background: linear-gradient(rgb(38, 38, 66, 0.8), rgb(0, 0, 0, 0.8));
+}
+form input,
+form select {
+  color: #61676d;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  align-self: center;
+  width: 97%;
+  box-sizing: border-box;
+}
+
+.survey-form .form-control {
+  padding-top: 5px;
+  margin: 5px auto; /*10px 0 10px 10px*/
+}
+input[type="radio"],
+input[type="checkbox"] {
+  float: left;
+  width: 20px;
+  margin-top: 2px; /*aligns the radio and check buttons with their respective label*/
+  height: 20px;
+  margin-right: 10px;
+  display: block;
+}
+form label {
+  padding-top: 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+form label,
+p {
+  display: block;
+  color: white;
+  margin: 10px; /*margin: 10px*/
+}
+textarea {
+  width: 97%;
+  color: #61676d;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+form input[type="submit"] {
+  background-color: rgb(55, 175, 101);
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+}
+
+@media (min-width: 550px) {
+  .survey-form form {
+    width: 500px;
+  }
+}
+
+@media (min-width: 768px) {
+  .survey-form form {
+    width: 680px;
+  }
+}
