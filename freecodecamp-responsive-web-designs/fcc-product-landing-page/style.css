@@ -1,0 +1,250 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+:root {
+    --primary-color: #f1c40f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.4;
+}
+
+body {
+    background: #eee;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+ul li {
+    font-size: 18px;
+    list-style: none;
+    margin: 16px auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    outline: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    line-height: 1.4;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding: 20px;
+}
+
+header {
+    background: #eee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 1;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+}
+
+#header.flex {
+    flex-wrap: wrap;
+}
+
+#header .hero-img,
+#header nav {
+    width: 90%;
+    text-align: center;
+}
+
+#intro {
+    text-align: center;
+    padding-top: 240px;
+}
+
+form input {
+    display: block;
+    margin: 16px auto;
+    padding: 8px;
+    width: 280px;
+    max-width: 100%;
+    outline: none;
+}
+
+input[type=submit] {
+    background: var(--primary-color);
+    border: 1px solid transparent;
+    border-radius: 2px;
+    font-weight: 900;
+    width: fit-content;
+}
+
+input[type=submit]:hover,
+button:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+#features .flex{
+    margin: 20px auto;
+    gap: 10px;
+}
+
+#features i {
+    color: darkorange;
+    display: none;
+}
+
+#features .description h3,
+h2 {
+    font-size: 24px;
+}
+
+#how_it_works {
+    text-align: center;
+}
+
+#how_it_works #video {
+    max-width: 100%;
+    margin: auto;
+}
+
+#pricing .flex {
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 2px solid #000;
+    border-radius: 4px;
+    margin: 20px auto;
+    text-align: center;
+    width: 300px;
+}
+
+.card-title {
+    background: #ddd;
+    padding: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.card-price {
+    font-size: 26px;
+    font-weight: 800;
+    margin: 16px auto 6px;
+}
+
+.card p {
+    line-height: 1.9;
+    font-size: 20px;
+}
+
+.card-btn {
+    background: var(--primary-color);
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    font-weight: 800;
+    margin: 16px 0;
+    outline: none;
+}
+
+.footer .container {
+    background: #ddd;
+    
+    padding: 15px;
+    text-align: right;
+    width: 100%;
+}
+
+footer nav {
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 552px){
+    .card {
+        width: 60%;
+    }
+
+    form input {
+        width: 400px;
+    }
+
+    #features .flex {
+        padding: 0 40px;
+    }
+
+    #features i {
+        display: inline;
+    }
+   
+    #features .description {
+        max-width: 70%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    #header.flex {
+        justify-content: space-between;
+    }
+
+    #header .hero-img {
+        width: 400px;
+    }
+        
+
+    #header nav {
+        width: fit-content;
+        justify-items: flex-end;
+    }
+
+    ul li {
+        display: inline-block;
+        margin: 0 20px;
+    } 
+
+    #intro {
+        padding-top: 100px;
+    }
+
+    section {
+        padding: 20px 0;
+    }
+
+    #how_it_works #video {
+        width: 500px;
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 800px){
+    ul li {
+        margin: 0 25px;
+    } 
+    
+    .card {
+        width: 30%;
+    }
+}
