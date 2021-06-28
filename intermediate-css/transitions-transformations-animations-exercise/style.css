@@ -1,3 +1,10 @@
+:root {
+    --second-rotation: 60s;
+    --minute-rotation: 3600s;
+    --hour-rotation: 86400s;
+    --dark-color: #141414;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,50 +16,82 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-image: linear-gradient(142deg,#074c69,#032538 100%);
 }
 
 #clock-face {
-    width: 250px;
-    height: 250px;
-    border: 3px solid #141414;
+    width: 350px;
+    height: 350px;
+    border: 8px solid var(--dark-color);
     border-radius: 50%;
     position: relative;
+    background: #fff;
+    box-shadow: inset 3px 3px 8px silver,
+    inset 3px -3px 8px silver,
+    inset -3px 3px 8px silver,
+    inset -3px -3px 8px silver;
 }
 
+/* hand */
+.hand,
+#dot {
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    transform-origin: bottom;
+}
+
+/* hour hand */
 #hour {
-    width: 3px;
-    height: 45px;
-    border: 1px solid #000;
-    position: absolute;
-    top: 75px;
-    left: 120px;
+    height: 35px;
+    background: var(--dark-color);    
+    top: calc(50% - 31px);
+    margin-left: -2px;
+    animation: rotate var(--hour-rotation) steps(60) infinite;
 }
 
+/* minute hand */
 #min {
-    width: 2px;
-    height: 65px;
-    border: 1px solid green;
-    position: absolute;
-    top: 60px;
-    left: 120px;
+    height: 55px;
+    background: green;
+    top: calc(50% - 51px);
+    margin-left: -2px;
+    animation: rotate var(--minute-rotation) steps(60) infinite;
 }
 
+/* second hand */
 #second {
     width: 1px;
     height: 85px;
     border: 1px solid red;
-    position: absolute;
-    top: 40px;
-    left: 120px;
+    top: calc(50% - 81px);
+    margin-left: -1px;
+    animation: rotate var(--second-rotation) steps(60) infinite; 
 }
 
+/* rotating animation */
+@keyframes rotate {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* center dot */
 #dot {
     width: 8px;
     height: 8px;
-    border: 1px solid #141414;
     border-radius: 100px;
-    background: blue;
-    position: absolute;
-    top: 120px;
-    left: 117px;
+    background: #000;
+    top: 50%;
+    margin-left: -4px;
+}
+
+@media (max-width: 355px) {
+    #clock-face {
+        width: 250px;
+        height: 250px;
+    }
 }
